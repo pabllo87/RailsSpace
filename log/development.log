@@ -1,0 +1,604 @@
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:26:34) [GET]
+  Session ID: ed49e66fe4cde07077ff8cbf874afbb8
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:26:34) [GET]
+  Session ID: ed49e66fe4cde07077ff8cbf874afbb8
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+
+
+Mysql::Error (#28000Access denied for user 'root'@'localhost' (using password: NO)):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:523:in `read'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:153:in `real_connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:28:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"controller"=>"rails/info", "action"=>"properties"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:28:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"controller"=>"rails/info", "action"=>"properties"}
+
+
+Mysql::Error (#08S01Bad handshake):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:523:in `read'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:153:in `real_connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:29:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:29:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+
+
+Mysql::Error (#08S01Bad handshake):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:523:in `read'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:153:in `real_connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:30:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:30:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+
+
+Mysql::Error (#08S01Bad handshake):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:523:in `read'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/vendor/mysql.rb:153:in `real_connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2012-06-19 16:32:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+  [4;36;1mSQL (0.000206)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'rails_space.schema_info' doesn't exist: SELECT version FROM schema_info[0m
+Completed in 0.06743 (14 reqs/sec) | Rendering: 0.00156 (2%) | DB: 0.00037 (0%) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 18:18:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"controller"=>"site", "action"=>"index"}
+  [4;36;1mSQL (0.000226)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000210)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering site/index
+Completed in 0.00632 (158 reqs/sec) | Rendering: 0.00261 (41%) | DB: 0.00044 (6%) | 200 OK [http://localhost/site/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 18:39:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+  [4;36;1mSQL (0.000246)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000179)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering site/index
+Completed in 0.00606 (165 reqs/sec) | Rendering: 0.00263 (43%) | DB: 0.00043 (7%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 18:51:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering site/index
+Completed in 0.00554 (180 reqs/sec) | Rendering: 0.00244 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:17:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.01152 (86 reqs/sec) | Rendering: 0.00812 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:17:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00521 (192 reqs/sec) | Rendering: 0.00243 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:17:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00566 (176 reqs/sec) | Rendering: 0.00238 (42%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:17:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00709 (140 reqs/sec) | Rendering: 0.00270 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:17:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00657 (152 reqs/sec) | Rendering: 0.00294 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:18:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+  [4;36;1mSQL (0.000214)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00894 (111 reqs/sec) | Rendering: 0.00485 (54%) | DB: 0.00036 (4%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:32:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00571 (175 reqs/sec) | Rendering: 0.00255 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:58:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00899 (111 reqs/sec) | Rendering: 0.00617 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2012-06-19 19:58:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/about
+Completed in 0.00679 (147 reqs/sec) | Rendering: 0.00393 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about]
+
+
+Processing SiteController#help (for 127.0.0.1 at 2012-06-19 19:58:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/help
+Completed in 0.00701 (142 reqs/sec) | Rendering: 0.00398 (56%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/help]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 19:58:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00671 (148 reqs/sec) | Rendering: 0.00336 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 20:28:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00710 (140 reqs/sec) | Rendering: 0.00392 (55%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 20:30:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00840 (119 reqs/sec) | Rendering: 0.00547 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2012-06-19 20:30:19) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/about
+Completed in 0.00727 (137 reqs/sec) | Rendering: 0.00373 (51%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about]
+
+
+Processing SiteController#help (for 127.0.0.1 at 2012-06-19 20:30:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/help
+Completed in 0.00643 (155 reqs/sec) | Rendering: 0.00366 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/help]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 20:30:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00678 (147 reqs/sec) | Rendering: 0.00358 (52%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 20:49:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00851 (117 reqs/sec) | Rendering: 0.00550 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-19 20:49:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/stylesheets/site.css" with {:method=>:get}):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 20:49:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00733 (136 reqs/sec) | Rendering: 0.00412 (56%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-19 20:49:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/stylesheets/site.css" with {:method=>:get}):
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/rails-2.0.2/lib/commands/server.rb:39
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /home/player/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /home/player/.rvm/gems/ruby-1.8.7-p358@rails_space/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 21:32:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00721 (138 reqs/sec) | Rendering: 0.00399 (55%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2012-06-19 21:32:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/about
+Completed in 0.00712 (140 reqs/sec) | Rendering: 0.00391 (54%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about]
+
+
+Processing SiteController#help (for 127.0.0.1 at 2012-06-19 21:32:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/help
+Completed in 0.00746 (134 reqs/sec) | Rendering: 0.00439 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/help]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 21:32:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00689 (145 reqs/sec) | Rendering: 0.00389 (56%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 21:49:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.01298 (77 reqs/sec) | Rendering: 0.00923 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2012-06-19 21:49:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/about
+Completed in 0.00879 (113 reqs/sec) | Rendering: 0.00516 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about]
+
+
+Processing SiteController#help (for 127.0.0.1 at 2012-06-19 21:49:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/help
+Completed in 0.01888 (52 reqs/sec) | Rendering: 0.01020 (54%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/help]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 21:49:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00763 (131 reqs/sec) | Rendering: 0.00404 (52%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2012-06-19 21:49:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/about
+Completed in 0.00873 (114 reqs/sec) | Rendering: 0.00450 (51%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about]
+
+
+Processing SiteController#help (for 127.0.0.1 at 2012-06-19 21:49:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/help
+Completed in 0.00720 (138 reqs/sec) | Rendering: 0.00428 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/help]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 21:49:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00830 (120 reqs/sec) | Rendering: 0.00476 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 22:10:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.00745 (134 reqs/sec) | Rendering: 0.00397 (53%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2012-06-19 23:05:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d8a8959a581d8a160fbfcc21c21b56ed3a790240
+  Parameters: {"controller"=>"site", "action"=>"index"}
+  [4;36;1mSQL (0.000254)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000211)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/site
+Rendering site/index
+Completed in 0.04703 (21 reqs/sec) | Rendering: 0.04276 (90%) | DB: 0.00047 (0%) | 200 OK [http://localhost/]

@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    background: gray;
+    margin: 0;
+    text-align: center;
+}
+
+#whole_page {
+    width: 50em;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    border-width: 0 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+}
