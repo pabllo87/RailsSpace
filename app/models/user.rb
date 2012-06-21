@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
     SCREEN_NAME_RANGE = SCREEN_NAME_MIN_LENGTH..SCREEN_NAME_MAX_LENGTH
     PASSWORD_RANGE = PASSWORD_MIN_LENGTH..PASSWORD_MAX_LENGTH
     
+    SCREEN_NAME_MAX_SIZE = 20
+    PASSWORD_SIZE = 10
+    EMAIL_SIZE = 30
+    
     HUMANIZED_ATTRIBUTES = {
         :email => "e-Mail",
         :screen_name => "Nick",
@@ -32,7 +36,7 @@ class User < ActiveRecord::Base
                         :message => "must be correct"
     
     def validate
-        errors.add(:email, "must be correct") unless email.include?("@")
+        #errors.add(:email, "must be correct") unless email.include?("@")
         if screen_name.include?(" ")
             errors.add(:screen_name, "can not contain spaces")
         end

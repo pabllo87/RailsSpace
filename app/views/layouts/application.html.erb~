@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title><%= @title %></title>
+        <%= stylesheet_link_tag "site" %>
+    </head>
+    <body>
+        <div id="whole_page">
+            <div id="header">RailsSpace</div>
+            <div id="nav">
+                <%= link_to_unless_current "Main page", :action => "index",
+                                                        :controller => "site" %> |
+                                                        
+                <%= link_to_unless_current "About us",  :action => "about",
+                                                        :controller => "site" %> |
+                                                        
+                <%= link_to_unless_current "Help",      :action => "help",
+                                                        :controller => "site" %> |
+                                                        
+                <%= link_to_unless_current "Register",  :action => "register", 
+                                                        :controller => "user" %>
+            </div>
+            <div id="content">
+                <% if flash[:notice] -%>
+                    <div id="notice"><%= flash[:notice] %></div>
+                <% end -%>
+                <%= yield %>
+            </div>
+            <% if ENV["RAILS_ENV"] == "development" %>
+                <%= debug(params) %>
+            <% end %>
+        </div>
+    </body>
+</html>
