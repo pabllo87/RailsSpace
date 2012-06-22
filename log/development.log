@@ -1369,3 +1369,612 @@ Processing UserController#index (for 127.0.0.1 at 2012-06-21 22:48:57) [GET]
 Rendering template within layouts/application
 Rendering user/index
 Completed in 0.00975 (102 reqs/sec) | Rendering: 0.00652 (66%) | DB: 0.00000 (0%) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000559)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000464)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000554)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001319)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001363)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.025832)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000308)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.128240)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000433)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.213322)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.122223)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088614)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001292)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042148)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000496)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001349)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001271)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000559)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.160071)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000392)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.109569)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.166651)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088722)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001123)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042414)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001332)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001294)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.169658)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.131876)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.157551)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088675)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001157)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042494)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000561)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001485)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001420)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000593)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.241959)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000469)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.285767)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.077820)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033193)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001165)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.075794)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000458)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.018396)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002117)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000586)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.278824)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000449)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.179793)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100123)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044214)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001122)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042531)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000473)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001288)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001259)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.169857)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.087281)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144494)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033129)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001118)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.031474)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000217)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000518)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001294)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001269)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000581)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.143876)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000391)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.133702)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.155613)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044222)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001116)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042525)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000240)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000476)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001345)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001264)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.134699)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000391)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.142986)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.157549)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044232)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001158)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042485)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000472)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001376)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001277)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000164)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.143236)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.132065)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144462)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033159)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001166)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042611)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000154)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000488)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001357)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001276)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.207456)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000396)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.098559)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144593)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088640)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001219)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.044417)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000234)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001302)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001330)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.182784)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000392)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.142891)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100136)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044234)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001166)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.098146)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000228)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000472)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001292)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001273)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000558)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.151083)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000388)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.076156)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.088970)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044198)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001179)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042500)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000396)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000266)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.032328)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.049944)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001398)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.036436)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.382335)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000416)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.197715)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.176559)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.122021)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001126)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.109281)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.015027)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001334)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001473)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000651)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.112962)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.221213)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.155672)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.099806)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.023789)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.064272)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000480)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002221)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001331)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000582)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.219734)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000403)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.098660)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100162)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088612)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001294)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042394)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000222)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000461)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001360)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001280)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000592)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.123790)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000393)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000160)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.120869)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.079801)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033129)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001157)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.075741)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000231)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001304)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001373)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000587)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.102180)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000436)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.087124)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.166847)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033187)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001109)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042455)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000178)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000228)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000539)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001355)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001587)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000598)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.112571)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000419)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.294769)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144569)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044318)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001165)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042519)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000158)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000456)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001343)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001348)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000545)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.168662)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.132096)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.079866)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033137)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001182)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042464)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000226)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000480)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001357)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001279)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000646)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.133744)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000389)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.098725)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.155759)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044221)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001149)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042524)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000407)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000479)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001291)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001305)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000534)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.122195)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000399)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.098405)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144548)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.088684)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001118)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042558)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000221)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000501)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001391)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001274)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000578)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.118433)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000139)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.186906)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.077581)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.178285)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001118)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.087005)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001448)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001283)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.121736)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000400)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.154430)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100181)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.090562)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001121)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042588)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000217)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000461)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001292)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001305)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000576)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.107320)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.143164)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.077922)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033176)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001152)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042550)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000233)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000544)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001318)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001350)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000544)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.129385)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000479)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000170)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.089199)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.222395)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.110910)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001134)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.031375)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000231)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000477)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001311)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001364)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000805)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.108046)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000414)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000228)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.098605)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.144678)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.044222)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001115)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042657)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001307)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001308)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000539)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.119906)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000398)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.076681)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.078008)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.035833)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001404)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.039305)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000195)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000191)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001292)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001310)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000596)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.124902)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.154259)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100153)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.033165)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001123)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.031502)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000484)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001297)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001282)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000534)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.120830)[0m   [0mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;36;1mSQL (0.000399)[0m   [0;1mCREATE DATABASE `rails_space_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.143152)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100154)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.099821)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001131)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.042499)[0m   [0;1mUPDATE schema_info SET version = 1[0m

@@ -20,7 +20,7 @@ class SiteControllerTest < ActionController::TestCase
   
   def test_about
     get :about
-    title = assigns(:title)
+    title = assings(:title)
     assert_equal "About RailsSpace", title
     assert_response :success
     assert_template "about"
@@ -28,7 +28,7 @@ class SiteControllerTest < ActionController::TestCase
   
   def test_help
     get :help
-    title = assigns(:title)
+    title = assings(:title)
     assert_equal "RailsSpace: Help", title
     assert_response :success
     assert_template "help"
