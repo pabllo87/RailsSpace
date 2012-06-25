@@ -4,7 +4,7 @@ class UserTest < ActiveSupport::TestCase
   fixtures :users
   
   def setup
-    @error_messages = ActiveRecord::Errors.default_error_messages
+    @error_messages = I18n.translate('activerecord.errors.messages')
     @valid_user = users(:valid_user)
     @invalid_user = users(:invalid_user)
   end

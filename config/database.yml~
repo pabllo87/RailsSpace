@@ -19,7 +19,7 @@ development:
   encoding: utf8
   database: rails_space_development
   username: root
-  password: root
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -28,15 +28,15 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: rails_space
+  database: rails_space_test
   username: root
-  password: root
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   encoding: utf8
-  database: rails_space
+  database: rails_space_production
   username: root
-  password: root
+  password: 
   socket: /var/run/mysqld/mysqld.sock

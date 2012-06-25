@@ -23,10 +23,10 @@ class User < ActiveRecord::Base
         HUMANIZED_ATTRIBUTES[attr.to_sym] || super
     end
     
-    validates_uniqueness_of :screen_name, :email, :message => "has already been taken"
-    validates_length_of     :screen_name, :within => SCREEN_NAME_RANGE, :too_short => "is to short (min #{SCREEN_NAME_MIN_LENGTH} char)", :too_long => "is to long (max #{SCREEN_NAME_MAX_LENGTH} char)"
-    validates_length_of     :password, :within => PASSWORD_RANGE, :too_short => "is to short (min #{PASSWORD_MIN_LENGTH} char)", :too_long => "is to long (max #{PASSWORD_MAX_LENGTH} char)"
-    validates_length_of     :email, :maximum => EMAIL_MAX_LENGTH, :message => "is to long"
+    validates_uniqueness_of :screen_name, :email
+    validates_length_of     :screen_name, :within => SCREEN_NAME_RANGE
+    validates_length_of     :password, :within => PASSWORD_RANGE
+    validates_length_of     :email, :maximum => EMAIL_MAX_LENGTH
     #validates_presence_of   :email, :message => "is not be empty"
     validates_format_of :screen_name,
                         :with => /^[A-ZąćęłńóśżźĄĆĘŁŃÓŻŹ0-9_]*$/i,
@@ -40,5 +40,17 @@ class User < ActiveRecord::Base
         if screen_name.include?(" ")
             errors.add(:screen_name, "can not contain spaces")
         end
+    end
+    
+    def login!(session)
+      session[:user_id] = self.id
+    end
+    
+    def self.logout!(session)
+      session[:user_id] = nil
+    end
+    
+    def clear_password!
+      self.password = nil
     end
 end

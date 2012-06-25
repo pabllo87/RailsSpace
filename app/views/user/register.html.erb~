@@ -3,6 +3,8 @@
     <fieldset>
         <legend>Fill out the fields below</legend>
         
+        <%= error_messages_for "user" %>
+        
         <div class="form_row">
             <label for="screen_name">Nick:</label>
             <%= form.text_field :screen_name, 

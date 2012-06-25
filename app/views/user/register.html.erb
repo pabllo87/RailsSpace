@@ -6,7 +6,7 @@
         <%= error_messages_for "user" %>
         
         <div class="form_row">
-            <label for="screen_name">Nick:</label>
+            <label for="screen_name">Login:</label>
             <%= form.text_field :screen_name, 
                                 :size => User::SCREEN_NAME_MAX_SIZE, 
                                 :maxlength => User::SCREEN_NAME_MAX_LENGTH %>

@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: rails_space
+  database: rails_space_production
   username: root
-  password: root
+  password: 
   socket: /var/run/mysqld/mysqld.sock
