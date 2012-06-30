@@ -14,12 +14,7 @@ class UserController < ApplicationController
       if @user.save
         @user.login!(session)
         flash[:notice] = "Created new user #{@user.screen_name} is successful!"
-        if (redirect_url = session[:protected_page])
-          session[:protected_page] = nil
-          redirect_to redirect_url
-        else
-          redirect_to :action => "index"
-        end
+        redirect_to_forwarding_url
       else
         @user.clear_password!
       end
@@ -28,18 +23,26 @@ class UserController < ApplicationController
   
   def login
     @title = "Login"
-    if param_posted?(:user)
+    if request.get?
+      @user = User.new(:remember_me => cookies[:remember_me] || "0")
+    elsif param_posted?(:user)
       @user = User.new(params[:user])
       user = User.find_by_screen_name_and_password(@user.screen_name, @user.password)
       if user
         user.login!(session)
-        flash[:notice] = "User #{user.screen_name} is log in!"
-        if (redirect_url = session[:protected_page])
-          session[:protected_page] = nil
-          redirect_to redirect_url
+        if @user.remember_me == "1"
+          cookies[:remember_me] = { :value => "1",
+                                    :expires => 10.years.from_now }
+          user.authorization_token = user.id
+          user.save!
+          cookies[:authorization_token] = { :value => user.authorization_token,
+                                             :expires => 10.years.from_now }
         else
-          redirect_to :action => "index"
+          cookies.delete(:remember_me)
+          cookies.delete(:authorization_token)
         end
+        flash[:notice] = "User #{user.screen_name} is log in!"
+        redirect_to_forwarding_url
       else
         @user.clear_password!
         flash[:notice] = "Incorrect login or password!"

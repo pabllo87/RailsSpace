@@ -1,4 +1,7 @@
+require "digest/sha1"
 class User < ActiveRecord::Base
+    
+    attr_accessor :remember_me
     
     SCREEN_NAME_MIN_LENGTH = 4
     SCREEN_NAME_MAX_LENGTH = 20
@@ -46,11 +49,37 @@ class User < ActiveRecord::Base
       session[:user_id] = self.id
     end
     
-    def self.logout!(session)
+    def remember!(cookies)
+        cookies_expiration = 10.years.from_now
+        cookies[:remember_me] = { :value => "1",
+                                  :expires => cookies_expiration }
+        self.authorization_token = unique_identifier
+        self.save!
+        cookies[:authorization_token] = { :value => self.authorization_token,
+                                          :expires => cookies_expiration }
+    end
+    
+    def forget!(cookies)
+        cookies.delete(:remember_me)
+        cookies.delete(:authorization_token)
+    end
+    
+    def remember_me?
+        self.remember_me == "1"
+    end
+    
+    def self.logout!(session, cookies)
       session[:user_id] = nil
+      cookies.delete(:authorization_token)
     end
     
     def clear_password!
       self.password = nil
+    end
+    
+    private
+    
+    def unique_identifier
+        Digest::SHA1.hexdigest("#{self.screen_name}:#{self.password}")
     end
 end

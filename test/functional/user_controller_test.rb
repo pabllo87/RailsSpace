@@ -117,6 +117,9 @@ class UserControllerTest < ActionController::TestCase
                                 :size => User::PASSWORD_SIZE,
                                 :maxlength => User::PASSWORD_MAX_LENGTH}
     assert_tag "input",
+                :attributes => {:name => "user[remember_me]",
+                                :type => "checkbox"}
+    assert_tag "input",
                 :attributes => {:type => "submit",
                                 :value => "Login!"}  
   end
@@ -124,11 +127,37 @@ class UserControllerTest < ActionController::TestCase
   # check correct log in
   def test_login_success
     valid_user = users(:valid_user)
-    try_to_login valid_user
+    try_to_login valid_user, :remember_me => "0"
     assert logged_in?
     assert_equal valid_user.id, session[:user_id]
     assert_equal "User #{valid_user.screen_name} is log in!", flash[:notice]
+    assert_response :redirect
     assert_redirected_to :action => "index"
+    
+    user = assigns(:user)
+    assert user.remember_me != "1"
+    assert_nil cookie_value(:remember_me)
+    assert_nil cookie_value(:authorization_token)
+  end
+  
+  def test_login_success_with_remember_me
+    valid_user = users(:valid_user)
+    try_to_login valid_user, :remember_me => "1"
+    test_time = Time.now
+    assert logged_in?
+    assert_equal valid_user.id, session[:user_id]
+    assert_equal "User #{valid_user.screen_name} is log in!", flash[:notice]
+    assert_response :redirect
+    assert_redirected_to :action => "index"
+    
+    user = User.find(valid_user.id)
+    time_range = 100
+    
+    assert_equal "1", cookie_value(:remember_me)
+    assert_in_delta 10.years.from_now(test_time), cookie_expires(:remember_me), time_range
+    
+    assert_equal user.authorization_token, cookie_value(:authorization_token)
+    assert_in_delta 10.years.from_now(test_time), cookie_expires(:authorization_token), time_range
   end
   
   # check incorrect log in with wrong login
@@ -159,13 +188,15 @@ class UserControllerTest < ActionController::TestCase
   
   def test_logout
     valid_user = users(:valid_user)
-    try_to_login valid_user
+    try_to_login valid_user, :remember_me => "1"
     assert logged_in?
+    assert_not_nil cookie_value(:authorization_token)
     get :logout
     assert_response :redirect
     assert_redirected_to :action => "index", :controller => "site"
     assert_equal "Logout success!", flash[:notice]
     assert !logged_in?
+    assert_nil cookie_value(:authorization_token)
   end
   
   # test nav after login
@@ -210,9 +241,11 @@ class UserControllerTest < ActionController::TestCase
   
   private
   
-  def try_to_login(user)
-   post :login, :user => { :screen_name => user.screen_name,
-                           :password    => user.password }
+  def try_to_login(user, options = {})
+    user_hash = { :screen_name => user.screen_name,
+                  :password    => user.password}
+    user_hash.merge!(options)
+    post :login, :user => user_hash
   end
   
   def authorize(user)
@@ -227,5 +260,13 @@ class UserControllerTest < ActionController::TestCase
     assert_response :redirect
     #assert_redirected_to :action => protected_page
     assert_nil session[:protected_page]
+  end
+  
+  def cookie_value(symbol)
+    cookies[symbol.to_s].value.first
+  end
+  
+  def cookie_expires(symbol)
+    cookies[symbol.to_s].expires
   end
 end
