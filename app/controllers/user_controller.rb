@@ -2,10 +2,11 @@ require "digest/sha1"
 class UserController < ApplicationController
   include ApplicationHelper
 
-  before_filter :protect, :only => :index
+  before_filter :protect, :only => [:index, :edit]
 
   def index
     @title = "RailsSpace: User centre"
+    @user = User.find(session[:user_id])
   end
 
   def register
@@ -45,6 +46,17 @@ class UserController < ApplicationController
     User.logout!(session, cookies)
     flash[:notice] = "Logout success!"
     redirect_to :action => "index", :controller => "site"
+  end
+  
+  def edit
+    @title = "Update profile"
+    @user = User.find(session[:user_id])
+    if param_posted?(:user)
+      if @user.update_attributes(params[:user])
+        flash[:notice] = "Updated e-Mail"
+        redirect_to :action => "index"
+      end
+    end
   end
   
   private

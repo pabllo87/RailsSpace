@@ -1,1 +1,9 @@
-<h1>Hello</h1>
+<h2>About you</h2>
+<ul>
+  <li>Nick: <%= @user.screen_name %></li>
+  <li>e-Mail: <%= @user.email %></li>
+  <li>Password: ********</li>
+</ul>
+<ul>
+  <li><%= link_to "Edit", :action => "edit" %></li>
+</ul>
