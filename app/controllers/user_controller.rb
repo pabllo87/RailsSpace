@@ -52,14 +52,29 @@ class UserController < ApplicationController
     @title = "Update profile"
     @user = User.find(session[:user_id])
     if param_posted?(:user)
-      if @user.update_attributes(params[:user])
-        flash[:notice] = "Updated e-Mail"
-        redirect_to :action => "index"
+      attribute = params[:attribute]
+      case attribute
+        when "email"
+          try_to_update @user, attribute
+        when "password"
+          if @user.current_password?(params)
+            try_to_update @user, attribute
+          else
+            @user.password_errors(params)
+          end
       end
     end
+    @user.clear_password!
   end
   
   private
+  
+  def try_to_update(user, attribute)
+    if user.update_attributes(params[:user])
+      flash[:notice] = "User #{user.screen_name} updated."
+      redirect_to :action => "index"
+    end
+  end
   
   def protect
     unless logged_in?

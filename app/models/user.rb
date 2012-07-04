@@ -2,6 +2,7 @@ require "digest/sha1"
 class User < ActiveRecord::Base
     
     attr_accessor :remember_me
+    attr_accessor :current_password
     
     SCREEN_NAME_MIN_LENGTH = 4
     SCREEN_NAME_MAX_LENGTH = 20
@@ -19,6 +20,7 @@ class User < ActiveRecord::Base
         :email => "e-Mail",
         :screen_name => "Nick",
         :password => "Password",
+        :current_password => "Current password",
     }
     
     # humanize field name
@@ -27,6 +29,7 @@ class User < ActiveRecord::Base
     end
     
     validates_uniqueness_of :screen_name, :email
+    validates_confirmation_of :password
     validates_length_of     :screen_name, :within => SCREEN_NAME_RANGE
     validates_length_of     :password, :within => PASSWORD_RANGE
     validates_length_of     :email, :maximum => EMAIL_MAX_LENGTH
@@ -75,6 +78,20 @@ class User < ActiveRecord::Base
     
     def clear_password!
       self.password = nil
+      self.password_confirmation = nil
+      self.current_password = nil
+    end
+    
+    def current_password?(params)
+        current_password = params[:user][:current_password]
+        self.password == current_password
+    end
+    
+    def password_errors(params)
+        self.password = params[:user][:password]
+        self.password_confirmation = params[:user][:password_confirmation]
+        self.valid?
+        errors.add(:current_password)
     end
     
     private

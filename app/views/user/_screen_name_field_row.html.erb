@@ -1,0 +1,6 @@
+<div class="form_row">
+    <label for="screen_name">Login:</label>
+    <%= form.text_field :screen_name, 
+                        :size => User::SCREEN_NAME_MAX_SIZE, 
+                        :maxlength => User::SCREEN_NAME_MAX_LENGTH %>
+</div>

@@ -20,27 +20,12 @@ class UserControllerTest < ActionController::TestCase
     assert_response :success
     assert_template "register"
     
-    assert_tag "form", 
-                :attributes => {:action => '/user/register',
-                               :method => "post"}
-    assert_tag "input",
-                :attributes => {:name => "user[screen_name]",
-                               :type => "text",
-                               :size => User::SCREEN_NAME_MAX_SIZE,
-                               :maxlength => User::SCREEN_NAME_MAX_LENGTH}
-    assert_tag "input",
-                :attributes => {:name => "user[email]",
-                                :type => "text",
-                                :size => User::EMAIL_SIZE,
-                                :maxlength => User::EMAIL_MAX_LENGTH}
-    assert_tag "input",
-                :attributes => {:name => "user[password]",
-                                :type => "password",
-                                :size => User::PASSWORD_SIZE,
-                                :maxlength => User::PASSWORD_MAX_LENGTH}
-    assert_tag "input",
-                :attributes => {:type => "submit",
-                                :value => "Register!"}  
+    assert_form_tag "/user/register"
+    assert_screen_name_field
+    assert_email_field
+    assert_password_field
+    assert_password_field "password_confirmation"
+    assert_submit_button "Register!"
   end
   
   def test_registration_success
@@ -239,6 +224,23 @@ class UserControllerTest < ActionController::TestCase
     friendly_url_forwarding_aux(:register, :index, user)
   end
   
+  def test_edit_page
+    valid_user = users(:valid_user)
+    authorize valid_user
+    get :edit
+    title = assigns(:title)
+    assert_equal "Update profile", title
+    assert_response :success
+    assert_template "edit"
+    
+    assert_form_tag "/user/edit"
+    assert_email_field valid_user.email
+    assert_password_field "current_password"
+    assert_password_field
+    assert_password_field "password_confirmation"
+    assert_submit_button "Update"
+  end
+  
   private
   
   def try_to_login(user, options = {})
@@ -268,5 +270,18 @@ class UserControllerTest < ActionController::TestCase
   
   def cookie_expires(symbol)
     cookies[symbol.to_s].expires
+  end
+  
+  def assert_email_field(email = nil, options = {})
+    assert_input_field("user[email]", email, "text", User::EMAIL_SIZE, User::EMAIL_MAX_LENGTH, options)
+  end
+  
+  def assert_password_field(password_field_name = "password", options = {})
+    blank = nil
+    assert_input_field("user[#{password_field_name}]", blank, "password", User::PASSWORD_SIZE, User::PASSWORD_MAX_LENGTH, options)
+  end
+  
+  def assert_screen_name_field(screen_name = nil, options = {})
+    assert_input_field("user[screen_name]", screen_name, "text", User::SCREEN_NAME_MAX_SIZE, User::SCREEN_NAME_MAX_LENGTH, options)
   end
 end
