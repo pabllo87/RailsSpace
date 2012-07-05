@@ -14,4 +14,17 @@ class ApplicationController < ActionController::Base
       user.login!(session) if user
     end
   end
+  
+  def param_posted?(symbol)
+    request.post? and params[symbol]
+  end
+  
+  def protect
+    unless logged_in?
+      session[:protected_page] = request.request_uri
+      flash[:notice] = "Please log in!"
+      redirect_to :controller => "user", :action => "login"
+      return false
+    end
+  end
 end

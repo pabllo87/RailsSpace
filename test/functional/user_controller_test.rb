@@ -198,7 +198,7 @@ class UserControllerTest < ActionController::TestCase
   def test_index_unauthorized
     get :index
     assert_response :redirect
-    assert_redirected_to :action => "login"
+    assert_redirected_to :controller => "user", :action => "login"
     assert_equal "Please log in!", flash[:notice]
   end
   
@@ -250,14 +250,10 @@ class UserControllerTest < ActionController::TestCase
     post :login, :user => user_hash
   end
   
-  def authorize(user)
-    @request.session[:user_id] = user.id
-  end
-  
   def friendly_url_forwarding_aux(test_page, protected_page, user)
     get protected_page
     assert_response :redirect
-    assert_redirected_to :action => "login"
+    assert_redirected_to :controller => "user", :action => "login"
     post test_page, :user => user
     assert_response :redirect
     #assert_redirected_to :action => protected_page

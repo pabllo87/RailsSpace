@@ -1,0 +1,11 @@
+class FaqController < ApplicationController
+  before_filter :protect
+
+  def index
+    redirect_to hub_url
+  end
+
+  def edit
+    
+  end
+end

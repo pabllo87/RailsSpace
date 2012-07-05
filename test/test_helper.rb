@@ -98,4 +98,8 @@ class Test::Unit::TestCase
     end
   end
   
+  def authorize(user)
+    @request.session[:user_id] = user.id
+  end
+  
 end

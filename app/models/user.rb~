@@ -1,6 +1,8 @@
+require "digest/sha1"
 class User < ActiveRecord::Base
-    
+    has_one :spec
     attr_accessor :remember_me
+    attr_accessor :current_password
     
     SCREEN_NAME_MIN_LENGTH = 4
     SCREEN_NAME_MAX_LENGTH = 20
@@ -18,6 +20,7 @@ class User < ActiveRecord::Base
         :email => "e-Mail",
         :screen_name => "Nick",
         :password => "Password",
+        :current_password => "Current password",
     }
     
     # humanize field name
@@ -26,6 +29,7 @@ class User < ActiveRecord::Base
     end
     
     validates_uniqueness_of :screen_name, :email
+    validates_confirmation_of :password
     validates_length_of     :screen_name, :within => SCREEN_NAME_RANGE
     validates_length_of     :password, :within => PASSWORD_RANGE
     validates_length_of     :email, :maximum => EMAIL_MAX_LENGTH
@@ -48,12 +52,51 @@ class User < ActiveRecord::Base
       session[:user_id] = self.id
     end
     
-    def self.logout!(session)
+    def remember!(cookies)
+        cookies_expiration = 10.years.from_now
+        cookies[:remember_me] = { :value => "1",
+                                  :expires => cookies_expiration }
+        self.authorization_token = unique_identifier
+        self.save!
+        cookies[:authorization_token] = { :value => self.authorization_token,
+                                          :expires => cookies_expiration }
+    end
+    
+    def forget!(cookies)
+        cookies.delete(:remember_me)
+        cookies.delete(:authorization_token)
+    end
+    
+    def remember_me?
+        self.remember_me == "1"
+    end
+    
+    def self.logout!(session, cookies)
       session[:user_id] = nil
       cookies.delete(:authorization_token)
     end
     
     def clear_password!
       self.password = nil
+      self.password_confirmation = nil
+      self.current_password = nil
+    end
+    
+    def current_password?(params)
+        current_password = params[:user][:current_password]
+        self.password == current_password
+    end
+    
+    def password_errors(params)
+        self.password = params[:user][:password]
+        self.password_confirmation = params[:user][:password_confirmation]
+        self.valid?
+        errors.add(:current_password)
+    end
+    
+    private
+    
+    def unique_identifier
+        Digest::SHA1.hexdigest("#{self.screen_name}:#{self.password}")
     end
 end

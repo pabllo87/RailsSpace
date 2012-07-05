@@ -3,6 +3,7 @@
     <head>
         <title><%= @title %></title>
         <%= stylesheet_link_tag "site" %>
+        <%= stylesheet_link_tag "profile" %>
         <%= javascript_include_tag :defaults %>
     </head>
     <body>
@@ -29,6 +30,7 @@
                     <div id="notice"><%= flash[:notice] %></div>
                 <% end -%>
                 <%= yield %>
+                <br clear="all" />
             </div>
         </div>
         <% if ENV["RAILS_ENV"] == "development" %>

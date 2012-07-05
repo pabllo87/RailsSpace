@@ -1,12 +1,14 @@
 require "digest/sha1"
 class UserController < ApplicationController
   include ApplicationHelper
-
+  helper :profile
   before_filter :protect, :only => [:index, :edit]
 
   def index
     @title = "RailsSpace: User centre"
     @user = User.find(session[:user_id])
+    @spec = @user.spec ||= Spec.new
+    @faq  = @user.faq  ||= Faq.new
   end
 
   def register
@@ -74,19 +76,6 @@ class UserController < ApplicationController
       flash[:notice] = "User #{user.screen_name} updated."
       redirect_to :action => "index"
     end
-  end
-  
-  def protect
-    unless logged_in?
-      session[:protected_page] = request.request_uri
-      flash[:notice] = "Please log in!"
-      redirect_to :action => "login"
-      return false
-    end
-  end
-  
-  def param_posted?(symbol)
-    request.post? and params[symbol]
   end
   
   def redirect_to_forwarding_url

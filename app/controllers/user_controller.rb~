@@ -1,10 +1,14 @@
+require "digest/sha1"
 class UserController < ApplicationController
   include ApplicationHelper
-
-  before_filter :protect, :only => :index
+  helper :profile
+  before_filter :protect, :only => [:index, :edit]
 
   def index
     @title = "RailsSpace: User centre"
+    @user = User.find(session[:user_id])
+    @user.spec ||= Spec.new
+    @spec = @user.spec
   end
 
   def register
@@ -24,23 +28,13 @@ class UserController < ApplicationController
   def login
     @title = "Login"
     if request.get?
-      @user = User.new(:remember_me => cookies[:remember_me] || "0")
+      @user = User.new(:remember_me => remember_me_string)
     elsif param_posted?(:user)
       @user = User.new(params[:user])
       user = User.find_by_screen_name_and_password(@user.screen_name, @user.password)
       if user
         user.login!(session)
-        if @user.remember_me == "1"
-          cookies[:remember_me] = { :value => "1",
-                                    :expires => 10.years.from_now }
-          user.authorization_token = user.id
-          user.save!
-          cookies[:authorization_token] = { :value => user.authorization_token,
-                                             :expires => 10.years.from_now }
-        else
-          cookies.delete(:remember_me)
-          cookies.delete(:authorization_token)
-        end
+        @user.remember_me? ? user.remember!(cookies) : user.forget!(cookies)
         flash[:notice] = "User #{user.screen_name} is log in!"
         redirect_to_forwarding_url
       else
@@ -51,24 +45,37 @@ class UserController < ApplicationController
   end
   
   def logout
-    User.logout!(session)
+    User.logout!(session, cookies)
     flash[:notice] = "Logout success!"
     redirect_to :action => "index", :controller => "site"
   end
   
-  private
-  
-  def protect
-    unless logged_in?
-      session[:protected_page] = request.request_uri
-      flash[:notice] = "Please log in!"
-      redirect_to :action => "login"
-      return false
+  def edit
+    @title = "Update profile"
+    @user = User.find(session[:user_id])
+    if param_posted?(:user)
+      attribute = params[:attribute]
+      case attribute
+        when "email"
+          try_to_update @user, attribute
+        when "password"
+          if @user.current_password?(params)
+            try_to_update @user, attribute
+          else
+            @user.password_errors(params)
+          end
+      end
     end
+    @user.clear_password!
   end
   
-  def param_posted?(symbol)
-    request.post? and params[symbol]
+  private
+  
+  def try_to_update(user, attribute)
+    if user.update_attributes(params[:user])
+      flash[:notice] = "User #{user.screen_name} updated."
+      redirect_to :action => "index"
+    end
   end
   
   def redirect_to_forwarding_url
@@ -78,5 +85,9 @@ class UserController < ApplicationController
     else
       redirect_to :action => "index"  
     end
+  end
+  
+  def remember_me_string
+    cookies[:remember_me] || "0"
   end
 end
